@@ -4,7 +4,7 @@ import "/Users/gin/Desktop/Ipsupply/crwn-clothing/src/component/form-input/form-
 
 const FormInput = ({ handleChange, label, ...otherProps }) => {
 
-    console.log(otherProps.value.length)
+    
   return (
     <div className="group">
       <input className="form-input" onChange={handleChange} {...otherProps} />

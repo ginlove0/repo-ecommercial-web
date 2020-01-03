@@ -2,7 +2,7 @@ import React from 'react'
 
 import '/Users/gin/Desktop/Ipsupply/crwn-clothing/src/component/collection-items/colection-item.styles.scss'
 
-const CollectionItems = ({id, name, price, imageUrl}) => {
+const CollectionItems = ({ name, price, imageUrl}) => {
     return (
         <div className='collection-item'>
             <div className='image'

@@ -23,18 +23,21 @@ export const checkProfile = async (userAuth, additionalData) => {
   const userRef = firestore.doc(`users/${userAuth.uid}`);
 
   //create snapShort to get all data from id that store in userRef
-  const snapShort = await userRef.get();
+  const snapShot = await userRef.get();
 
   //check if account was created in database, executed catch, otherwise execute try
-  if (!snapShort.exists) {
+  if (!snapShot.exists) {
     const { displayName, email } = userAuth;
-    const createAt = new Date();
-
-    //set new user with name, email and date
+    const createdAt = new Date();
     try {
-      await userRef.set({ displayName, email, createAt, ...additionalData });
+      await userRef.set({
+        displayName,
+        email,
+        createdAt,
+        ...additionalData
+      });
     } catch (error) {
-      console.log("error creating user", error.message);
+      console.log('error creating user', error.message);
     }
   }
 

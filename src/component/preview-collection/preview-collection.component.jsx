@@ -3,7 +3,7 @@ import React from "react";
 import "/Users/gin/Desktop/Ipsupply/crwn-clothing/src/component/preview-collection/preview-collection.styles.scss";
 import CollectionItems from '../collection-items/collection-item.component'
 
-const PreviewCollection = ({ title, items }) => {
+const CollectionPreview = ({ title, items }) => {
   return (
     <div className="collection-preview">
       <h1 className="title">{title.toUpperCase()}</h1>
@@ -18,4 +18,4 @@ const PreviewCollection = ({ title, items }) => {
   );
 };
 
-export default PreviewCollection;
+export default CollectionPreview;
